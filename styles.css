@@ -1,0 +1,58 @@
+.titulo-centralizado {
+    text-align: center;
+}
+
+.rotulo-negrito {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.espaco-vertical {
+    margin-bottom: 20px;
+}
+
+.botao-estilizado {
+    background-color: black;
+    color: lime;
+}
+
+.formulario-centralizado {
+    text-align: center;
+    margin: 0 auto;
+}
+   .tabela-centralizada {
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+    }
+    
+    .tabela-centralizada th,
+    .tabela-centralizada td {
+        padding: 10px;
+    }
+
+.porcentagem-estilo {
+    background-color: gray;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.ruim {
+    background-color: red;
+    color: white;
+}
+
+.mediana {
+    background-color: yellow;
+}
+
+.bom {
+    background-color: lightgreen;
+    color: white;
+}
+
+.forte {
+    background-color: darkgreen;
+    color: white;
+}

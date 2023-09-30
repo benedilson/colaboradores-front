@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="ColaboradoresApp">
+<head>
+    <title>Gerenciamento de Colaboradores</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-controller="ColaboradoresController">
+    <div class="titulo-centralizado">
+        <h1>Gerenciamento de Colaboradores</h1>
+    </div>
+    
+    <div class="formulario-centralizado">
+    <form>
+        <div class="campo-formulario">
+        <label for="nome" class="rotulo-negrito">Nome:</label>
+          <input type="text" id="nome" ng-model="colaborador.nome" name="nome" />
+    </div>
+    <div class="espaco-vertical"></div>
+    <div class="campo-formulario">
+          <label for="senha" class="rotulo-negrito">Senha:</label>
+          <input type="password" id="senha" ng-model="colaborador.senha" name="senha" />
+    </div>
+    <div class="espaco-vertical"></div>    
+    <div class="linha-botao">
+           <button type="button"  class="botao-estilizado" ng-click="salvarColaborador()">Salvar</button>
+        </div>
+    </form>
+  </div>
+
+    <div class="titulo-centralizado">
+      <h2>Lista de Colaboradores</h2>
+    </div>    
+
+    <table class="tabela-centralizada">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Porcentagem</th>
+                <th>Classificação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="colaborador in colaboradores">
+                <td>{{ colaborador.nome }}</td>
+                <td><span class="porcentagem-estilo">{{ colaborador.porcentagem }}%</span></td>
+                <td><span ng-class="obterClasseSenha(colaborador)">{{obterClassificacaoSenha(colaborador)}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
